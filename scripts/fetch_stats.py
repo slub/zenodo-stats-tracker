@@ -52,7 +52,7 @@ def fetch_monthly_report():
             report_rows.append(row)
             for i in range(len(row)-1): grand_totals[i] += row[i+1]
 
-    filename = f"data/stats_{month_str}.csv"
+    filename = f"data/test_stats_{month_str}.csv"
     with open(filename, mode='w', newline='') as f:
         writer = csv.writer(f)
         writer.writerow(["record_id", "month_views", "month_unique_views", "month_downloads", "month_unique_downloads", 
